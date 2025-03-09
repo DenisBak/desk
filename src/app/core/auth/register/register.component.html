@@ -1,0 +1,56 @@
+<div class="register">
+  <form>
+    <mat-label>Имя</mat-label>
+    <div class="input">
+      <mat-dialog-content>
+        <input
+          marInput
+          [(ngModel)]="name"
+          name="name"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </mat-dialog-content>
+    </div>
+    <mat-label>Пароль</mat-label>
+    <div class="input">
+      <mat-dialog-content>
+        <input
+          matInput
+          [(ngModel)]="password"
+          name="password"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </mat-dialog-content>
+    </div>
+    <mat-label>Почта</mat-label>
+    <div class="input">
+      <mat-dialog-content>
+        <input
+          matInput
+          [(ngModel)]="mail"
+          name="mail"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </mat-dialog-content>
+    </div>
+    <mat-label>Код</mat-label>
+    <div class="code">
+      <mat-dialog-content>
+        <input
+          matInput
+          [(ngModel)]="code"
+          name="code"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </mat-dialog-content>
+    </div>
+    <mat-dialog-actions>
+      <button mat-raised-button class="button" (click)="register()">
+        <p class="register-button">Register</p>
+      </button>
+      <div>
+        {{ message }}
+      </div>
+    </mat-dialog-actions>
+  </form>
+</div>

@@ -1,0 +1,47 @@
+<div class="register">
+  <form>
+    <mat-label>ФИО</mat-label>
+    <div class="input">
+      <mat-dialog-content>
+        <input
+          marInput
+          [(ngModel)]="name"
+          name="name"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </mat-dialog-content>
+    </div>
+    <mat-label>дата</mat-label>
+    <div class="input">
+      <mat-dialog-content>
+        <input
+          matInput
+          [(ngModel)]="surname"
+          name="surname"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </mat-dialog-content>
+    </div>
+    <mat-label>подпись под фото</mat-label>
+    <div class="input">
+      <mat-dialog-content>
+        <input
+          marInput
+          [(ngModel)]="lastName"
+          name="lastName"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </mat-dialog-content>
+    </div>
+    <mat-dialog-actions>
+      <div class="buttons">
+        <button mat-raised-button class="button" (click)="loadPhoto()">
+          <p class="register-button">Load Photo</p>
+        </button>
+        <button mat-raised-button class="button" (click)="addPhoto()">
+          <p class="register-button">Add Photo</p>
+        </button>
+      </div>
+    </mat-dialog-actions>
+  </form>
+</div>

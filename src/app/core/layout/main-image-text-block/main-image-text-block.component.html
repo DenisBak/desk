@@ -1,0 +1,23 @@
+<section class="container">
+  <div class="left-column">
+    <h1>
+      <span class="title">Title</span> text,
+      <span class="title">Title</span> text.
+    </h1>
+    @for(prg of prgs; track prg) {
+    {{ prg }}
+    }
+    <br />
+    <div class="tragedy-container">
+      @for(war of wars ; track war.id){
+      <nav class="tragedy-list">
+        <a [routerLink]="[war.link]">&emsp;{{ war.name }}&emsp;</a>
+      </nav>
+      }
+    </div>
+  </div>
+  <div class="right-column">
+    <img src="{{ image }}" alt="Visual Aids" class="image" />
+  </div>
+</section>
+<router-outlet> </router-outlet>

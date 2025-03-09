@@ -1,0 +1,13 @@
+<header class="container">
+  <div class="top-bar">
+    <a  class="company-name">{{ companyName }}</a>
+    <a [routerLink]="['/']">Главная</a>
+    <div>
+      <a class="register" [routerLink]="['/register']">Register</a>
+      <a class="login" routerLink='/login'>Login</a>
+      <a routerLink="/profile">Profile</a>
+    </div>
+  </div>
+</header>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,13 @@
+<section>
+  <div class="gallery">
+    <div class="gallery-container">
+      <div class="photo-grid">
+        <div *ngFor="let photo of photos  " class="photo-item">
+          <img [src]="photo.url" alt="photo">
+          <p><strong>{{ photo.caption }}</strong></p>
+          <p>{{ photo.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
